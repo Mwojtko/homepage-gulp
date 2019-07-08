@@ -34,7 +34,7 @@ body {
 .site-header {
   grid-area: navigation;
   text-align: center;
-  
+  min-height: 48px;
   position: fixed;
   width: 100%;
   top: 0px;
@@ -60,11 +60,10 @@ body {
 .navHome {
   grid-area: menu;
   text-align: center;
-}
-
-.navHome__page {
-  display: flex;
-  justify-content: center;
+  &__page {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .learning{
@@ -91,34 +90,30 @@ body {
   text-align: center;
 }
 
-
 .foot {
   grid-area: footer;
   text-align: center
 }
 
-
-
-
-
-.navigation__list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center
+.navigation {
+  &__list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item{
+    display: block;
+    margin: 0 16px;
+  }
+  &__link{
+    color: #75B9BE;
+    font-size: 20px;
+    text-decoration: underline;
+  }
 }
 
-.navigation__item {
-  display: block;
-  margin: 0 16px;
-}
-
-.navigation__link {
-  color: #75B9BE;
-  font-size: 20px;
-  text-decoration: underline;
-}
 
 .navigation__link:visited {
   color: white; 
@@ -132,10 +127,13 @@ body {
   border: 3px solid red;
 }
 
-
-
-.about__header {
-color: #A8B680;
+.about {
+  &__header{
+    color: #A8B680;
+  }
+  &__paragraph{
+    color:#D2E3A0;
+  }
 }
 
 .about__header::before {
@@ -156,11 +154,6 @@ color: #A8B680;
   background: green;
 }
 
-.about__paragraph {
-  color:#D2E3A0;
-}
-
-
 @media (min-width: 641px){
   .main {
       max-width: 900px;
@@ -169,8 +162,6 @@ color: #A8B680;
       display:none;
   }
 
-  
-  
 }
 
 @media (max-width: 640px) {
@@ -190,35 +181,32 @@ color: #A8B680;
       "footer";
       grid-template-columns: 1fr;
   }
-  
 
-  .navigation__list {
+  .navigation{
+    &__list{
       flex-direction: column;
       display:none;
-  }
-
-  .navigation__list--visible {
-      display: flex; 
-  }
-
-  .navigation__item {
+      &--visible {
+        display: flex;
+      }
+    }
+    &__item{
       margin: 16px;
-  }
-
-  .site-header {
-      min-height: 48px;
-  }
-
-  .navigation__switcher {
+    }
+    &__switcher{
       border: none;
       background: white;
       position:absolute;
       right: 16px;
       top:16px;
-      
+    }
+    
   }
- 
+
 }
+
+
+
 
 
 
