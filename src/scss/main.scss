@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:700&display=swap&subset=latin-ext');
 
 
 html {
@@ -14,6 +15,7 @@ html {
 body {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(124,51,170,1) 19%, rgba(145,140,161,1) 88%);
+  font-family: "Lato";
 }
 
 .grid {
@@ -49,6 +51,7 @@ body {
   text-align: center;
   color: #3F4430;
   padding-top: 24px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .author {
