@@ -1,4 +1,4 @@
-![Homepage screenshot](github/gh.png)
+![Homepage screenshot](github/gh.PNG)
 
 # Prototypowy Homepage 
 
